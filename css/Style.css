@@ -66,11 +66,12 @@ header *{
   border-radius:28px;
   background:
     linear-gradient(135deg,rgba(0,0,0,.55),rgba(0,0,0,.15)),
-    url("../img/capa.png") center/cover no-repeat;
+    url("../capa.png") center/cover no-repeat;
   box-shadow:0 25px 60px rgba(0,0,0,.25);
   display:flex;
   align-items:flex-end;
 }
+
 
 .hero-content{
   padding:40px;
@@ -113,7 +114,12 @@ header *{
   cursor:pointer;
   transition:.35s;
   transform-style:preserve-3d;
+  transform:
+    perspective(1000px)
+    rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
 }
+
 
 .card:hover{
   transform:translateY(-8px) scale(1.015);
@@ -156,3 +162,21 @@ footer{
   font-size:14px;
   color:#777;
 }
+/* ===================== */
+/* ANIMAÇÕES DE ENTRADA */
+/* ===================== */
+.fade-up{
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity .8s ease, transform .8s ease;
+}
+
+.fade-up.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.fade-delay-1{transition-delay:.15s}
+.fade-delay-2{transition-delay:.3s}
+.fade-delay-3{transition-delay:.45s}
+
