@@ -1,0 +1,158 @@
+/* ===================== */
+/* RESET E BASE */
+/* ===================== */
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Poppins, Arial, sans-serif;
+  color:#333;
+  background:linear-gradient(180deg,rgb(250,250,250),rgb(244,246,248));
+}
+
+/* ===================== */
+/* HEADER + ONDAS */
+/* ===================== */
+header{
+  position:relative;
+  padding:70px 20px 110px;
+  text-align:center;
+  color:#fff;
+  overflow:hidden;
+  background:
+    radial-gradient(1200px 400px at 10% 20%, rgba(255,255,255,.12), transparent 60%),
+    radial-gradient(900px 300px at 90% 10%, rgba(255,255,255,.08), transparent 55%),
+    linear-gradient(135deg,rgb(255,152,0),rgb(255,87,34),rgb(211,47,47));
+}
+
+/* Onda secundária */
+header::before{
+  content:"";
+  position:absolute;
+  bottom:40px;
+  left:0;
+  width:100%;
+  height:160px;
+  background:rgba(255,255,255,.25);
+  clip-path:path("M0,100 C160,60 320,140 480,120 C640,100 800,60 960,80 C1120,100 1280,60 1440,80 L1440,200 L0,200 Z");
+  z-index:1;
+}
+
+/* Onda principal */
+header::after{
+  content:"";
+  position:absolute;
+  bottom:-1px;
+  left:0;
+  width:100%;
+  height:180px;
+  background:rgb(245,246,249);
+  clip-path:path("M0,80 C120,120 280,40 420,60 C560,80 680,140 840,120 C1000,100 1120,60 1280,80 L1280,200 L0,200 Z");
+  z-index:2;
+}
+
+header *{
+  position:relative;
+  z-index:3;
+}
+
+/* ===================== */
+/* HERO */
+/* ===================== */
+.hero{
+  max-width:1200px;
+  height:420px;
+  margin:50px auto 20px;
+  border-radius:28px;
+  background:
+    linear-gradient(135deg,rgba(0,0,0,.55),rgba(0,0,0,.15)),
+    url("../img/capa.png") center/cover no-repeat;
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
+  display:flex;
+  align-items:flex-end;
+}
+
+.hero-content{
+  padding:40px;
+  max-width:520px;
+  color:#fff;
+  background:linear-gradient(to right,rgba(0,0,0,.65),rgba(0,0,0,.25),transparent);
+  border-radius:18px;
+}
+
+.hero-content h2{font-size:36px}
+.hero-content p{font-size:16px}
+
+/* ===================== */
+/* CONTAINER */
+/* ===================== */
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:60px 20px;
+  text-align:center;
+  background:rgba(255,255,255,.6);
+  border-radius:28px;
+}
+
+/* ===================== */
+/* CARDS */
+/* ===================== */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 8px 22px rgba(0,0,0,.1);
+  cursor:pointer;
+  transition:.35s;
+  transform-style:preserve-3d;
+}
+
+.card:hover{
+  transform:translateY(-8px) scale(1.015);
+  box-shadow:0 18px 40px rgba(0,0,0,.15);
+}
+
+.card.active{
+  background:linear-gradient(135deg,#ff9800,#ff5722);
+  color:#fff;
+}
+
+/* ===================== */
+/* WHATSAPP */
+/* ===================== */
+.whatsapp-button-landing{
+  position:fixed;
+  bottom:90px;
+  right:24px;
+  background:#25d366;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:50px;
+  display:flex;
+  gap:12px;
+  text-decoration:none;
+  box-shadow:0 8px 22px rgba(0,0,0,.25);
+  animation:pulseWhatsapp 1.6s infinite;
+  z-index:9999;
+}
+
+@keyframes pulseWhatsapp{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
+  70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+  color:#777;
+}
