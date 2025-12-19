@@ -1,5 +1,3 @@
-alert('JS carregou');
-
 /* ===================== */
 /* ANIMAÇÃO DE ENTRADA */
 /* ===================== */
@@ -46,4 +44,5 @@ document.querySelectorAll('.card[data-link]').forEach(card => {
     window.location.href = card.dataset.link;
   });
 });
+
 
