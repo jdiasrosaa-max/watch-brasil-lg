@@ -226,13 +226,6 @@ margin: top 40px;
 perspective:1200px;
 }
 
-.card:hover{
-transform:translateY(-10px) scale(1.03);
-box-shadow:
-  0 20px 45px rgba(0,0,0,.45),
-  0 0 25px rgba(255,87,34,.4);
-}
-
 .card span{
 font-size:42px;
 display:block;
@@ -292,12 +285,6 @@ margin-bottom:10px;
   box-shadow:
     0 22px 45px rgba(0,0,0,.45),
     0 0 28px rgba(255,87,34,.45);
-}
-
-/* Desktop (mouse) */
-.card:hover{
-  transform: translateY(-8px) scale(1.015);
-  box-shadow:0 18px 40px rgba(0,0,0,.15);
 }
 
 /* Mobile (toque) */
@@ -875,27 +862,7 @@ document.querySelectorAll('.fade-up').forEach(el => {
   observer.observe(el);
 });
 
-/* ===================== */
-/* EFEITO INTERATIVO ELEGANTE NOS CARDS */
-/* ===================== */
-document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
 
-    const moveX = (x - rect.width / 2) / 30;
-    const moveY = (y - rect.height / 2) / 30;
-
-    card.style.transform =
-  `translateY(-6px) rotateX(${-moveY}deg) rotateY(${moveX}deg)`;
-
-  });
-
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-  });
-});
 let lastScroll = 0;
 const topbar = document.querySelector('.topbar');
 
@@ -972,4 +939,5 @@ setInterval(() => {
 
 </body>
 </html>
+
 
