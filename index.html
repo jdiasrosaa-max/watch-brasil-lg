@@ -221,7 +221,7 @@ text-align:center;
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap: 28px;
+gap: 32px;
 margin: top 40px;
 perspective:1200px;
 }
@@ -278,7 +278,15 @@ margin-bottom:10px;
     transform .35s ease,
     box-shadow .35s ease;
 }
+.cards {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: .15s;
+}
 
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
 .card:hover{
   transform:translateY(-10px) scale(1.03);
   box-shadow:
@@ -295,19 +303,6 @@ margin-bottom:10px;
 /* Mobile (toque) */
 .card:active{
   transform: scale(.98);
-}
-/* ===================== */
-/* EFEITO 3D PREMIUM */
-/* ===================== */
-.cards{
-  perspective: 1200px;
-}
-
-.card{
-  transform-style: preserve-3d;
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease;
 }
 
 /* ===================== */
@@ -977,3 +972,4 @@ setInterval(() => {
 
 </body>
 </html>
+
