@@ -42,13 +42,57 @@ header a{
   font-weight:500;
 }
 
-/* FUNDO */
+/* ===================== */
+/* FUNDO ANIMADO PREMIUM */
+/* ===================== */
+.bg-animated{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background:
+    radial-gradient(
+      1200px circle at 10% 20%,
+      rgba(216,134,11,.65),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px circle at 90% 80%,
+      rgba(255,86,34,.55),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      #f79d9d,
+      #f09861,
+      #cf7676
+    );
+  background-size:
+    200% 200%,
+    200% 200%,
+    100% 100%;
+  animation:bgMove 25s ease-in-out infinite;
+}
+
+@keyframes bgMove{
+  0%{
+    background-position:0% 0%,100% 100%,0% 50%;
+  }
+  50%{
+    background-position:100% 50%,0% 50%,100% 50%;
+  }
+  100%{
+    background-position:0% 0%,100% 100%,0% 50%;
+  }
+}
+
+/* FUNDO COM IMAGEM */
 .fundo{
   min-height:100vh;
   padding:80px 20px;
   background:
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url("img/capa.png") center/cover no-repeat;
+    url("/img/capa.png") center/cover no-repeat;
 }
 
 /* CARD */
@@ -105,10 +149,6 @@ header a{
 /* MOBILE */
 @media(max-width:768px){
 
-  body{
-    padding-top:70px;
-  }
-
   .fundo{
     padding:40px 12px;
   }
@@ -133,9 +173,12 @@ header a{
 
 <body>
 
+<!-- FUNDO ANIMADO -->
+<div class="bg-animated"></div>
+
 <header>
-  <img src="img/logo.png" alt="Start Telecom">
-  <a href="../index.html">← Voltar</a>
+  <img src="/img/logo.png" alt="Start Telecom">
+  <a href="/index.html">← Voltar</a>
 </header>
 
 <section class="fundo">
@@ -167,4 +210,3 @@ header a{
 
 </body>
 </html>
-
