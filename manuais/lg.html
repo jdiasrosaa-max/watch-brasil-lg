@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Manual • Start Telecom</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'DM Sans',sans-serif;
+  background:#f5f6f8;
+  color:#1a1a1a;
+  padding-top:72px;
+}
+
+/* TOPBAR */
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:72px;
+  background:rgba(255,106,26,.95);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 32px;
+  z-index:1000;
+}
+
+.topbar img{height:40px}
+
+.topbar a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* CONTEÚDO */
+.manual-wrapper{
+  min-height:100vh;
+  padding:40px 16px;
+}
+
+.manual-container{
+  max-width:960px;
+  margin:auto;
+  background:#fff;
+  padding:32px;
+  border-radius:20px;
+  box-shadow:0 18px 40px rgba(0,0,0,.15);
+}
+
+.manual-container h1{
+  font-family:'Poppins',sans-serif;
+  font-size:28px;
+  margin-top:0;
+  color:#ff6a1a;
+}
+
+.manual-container p{
+  font-size:15px;
+  line-height:1.6;
+  color:#444;
+}
+
+/* CANVA */
+.canva-embed{
+  position:relative;
+  width:100%;
+  aspect-ratio: 16 / 9;
+  margin-top:24px;
+  border-radius:14px;
+  overflow:hidden;
+}
+
+.canva-embed iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* LINK */
+.fullscreen-link{
+  display:inline-block;
+  margin-top:20px;
+  font-weight:600;
+  color:#ff6a1a;
+  text-decoration:none;
+}
+
+/* MOBILE */
+@media (max-width:600px){
+  .manual-container{
+    padding:24px 18px;
+  }
+
+  .manual-container h1{
+    font-size:22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <img src="img/logo.png" alt="Start Telecom">
+  <a href="index.html">⬅ Voltar</a>
+</header>
+
+<main class="manual-wrapper">
+  <div class="manual-container">
+
+    <h1>Manual TV Samsung</h1>
+
+    <p>
+      Siga o passo a passo abaixo para instalar o aplicativo da Watch Brasil
+      na sua Smart TV Samsung de forma simples e rápida.
+    </p>
+
+    <div class="canva-embed">
+      <iframe
+        loading="lazy"
+        src="https://www.canva.com/design/DAG6fdszln0/rLbRUuRgFM9DMS-g3uvv9g/view?embed"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <a
+      class="fullscreen-link"
+      href="https://www.canva.com/design/DAG6fdszln0/rLbRUuRgFM9DMS-g3uvv9g/view"
+      target="_blank"
+      rel="noopener">
+      Abrir manual em tela cheia
+    </a>
+
+  </div>
+</main>
+
+</body>
+</html>
