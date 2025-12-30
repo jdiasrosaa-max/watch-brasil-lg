@@ -167,7 +167,15 @@ header a{
     height:60vh;
     border-radius:12px;
   }
+  header a img{
+  transition:transform .25s ease, opacity .25s ease;
 }
+
+header a img:hover{
+  transform:scale(1.05);
+  opacity:.9;
+}
+
 </style>
 </head>
 
@@ -177,9 +185,13 @@ header a{
 <div class="bg-animated"></div>
 
 <header>
-  <img src="/img/logo.png" alt="Start Telecom">
-  <a href="/index.html">← Voltar</a>
+  <a href="/">
+    <img src="/img/logo.png" alt="Start Telecom">
+  </a>
+
+  <a href="/">← Voltar</a>
 </header>
+
 
 <section class="fundo">
   <div class="container">
@@ -210,4 +222,5 @@ header a{
 
 </body>
 </html>
+
 
